@@ -123,13 +123,12 @@
   </script>
 
   <script>
-    <script src="/assets/js/gitalk.min.js"></script>
     var gitalk = new Gitalk({
-      clientID: '{{ site.comments.gitalk.clientID }}',
-      clientSecret: '{{ site.comments.gitalk.clientSecret }}',
-      repo: '{{ site.comments.gitalk.repo }}',
-      owner: '{{ site.comments.gitalk.owner }}',
-      admin: '{{ site.comments.gitalk.admin }}',
+      clientID: '{{ site.comments.clientID }}',
+      clientSecret: '{{ site.comments.clientSecret }}',
+      repo: '{{ site.comments.repo }}',
+      owner: '{{ site.comments.owner }}',
+      admin: '{{ site.comments.admin }}',
       id: '{{ page.url }}',     
       distractionFreeMode: true  
     })
