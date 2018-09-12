@@ -36,7 +36,7 @@ comments:
         repo: blog-comments
         clientID: cb7b6e6e791ee7a59931
         clientSecret: b564d87c30bc313bf3f060fa198b0661ad304900
-        distractionFreeMode:true
+    
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
