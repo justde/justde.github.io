@@ -31,8 +31,8 @@ nightMode: true
 # Comments 评论功能
 comments: 
     gitalk: true
-    owner: justd
-    admin: justd
+    owner: IsZhangjd@outlook.com
+    admin: IsZhangjd@outlook.com
     repo: Document
     clientID: 04a74835a661081cbedd
     clientSecret: 857603fba828869e3ea4d8b90df3492ce7b9cc56
