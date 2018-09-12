@@ -32,7 +32,7 @@ nightMode: true
 comments: true
 gitalk:
     owner: justd
-    admin:IsZhangjd@outlook.com
+    admin: IsZhangjd@outlook.com
     repo: blog-comments
     clientID: cb7b6e6e791ee7a59931
     clientSecret: b564d87c30bc313bf3f060fa198b0661ad304900
