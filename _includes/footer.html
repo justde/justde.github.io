@@ -1,29 +1,4 @@
 <footer class="g-footer">
-   <div class="site-footer">
-        <div class="site-footer-icons">
-            <a target="_blank" href="https://www.zhihu.com/people/ityouknow">
-               知乎
-            </a>
-            <a target="_blank" href="http://weibo.com/ityouknow">
-               微博
-            </a>
-            <a target="_blank" href="https://github.com/ityouknow">
-                Github
-            </a>
-        </div>
-        <div class="site-footer-links mobile-hidden">
-            {% for nav in site.labels %}
-            <a href="{{ nav.href }}" title="{{ nav.name }}" target="{{ nav.target | default: _self }}">{{ nav.name }}</a>
-            {% endfor %}
-        </div>
-          <div class="site-footer-icons">
-
-        </div>
-        <div class="scrolltop">
-            <a href="javascript:window.scrollTo(0,0)" >TOP</a>
-        </div>
-        <div class="rss"><a href="{{ site.subscribe_rss }}"><span class="octicon octicon-rss" style="color:orange;"></span></a></div>
-    </div>
   <section>{{ site.title }} ©
   {% assign current = "now" | date: "%Y" | plus: 0%}
   {% unless site.footer.since and site.footer.since == current %}
