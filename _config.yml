@@ -28,14 +28,18 @@ search: true
 # Night mode
 nightMode: true
 
+
+b2t: true
+
+
 # Comments 评论功能
 comments: 
     gitalk: true
     owner: justde
     admin: justde
     repo: blog-comments
-    clientID: 04a74835a661081cbedd
-    clientSecret: 857603fba828869e3ea4d8b90df3492ce7b9cc56
+    clientID: 7e02ff331c24aa89ee02
+    clientSecret: 31bb5bf2568ac7ae0bad70ea83f6e9f9b28f2589
     
 
 # MathJax 公式支持 by Ray-Eldath
