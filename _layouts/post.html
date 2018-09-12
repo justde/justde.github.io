@@ -100,13 +100,10 @@
       {% endif %}
     </section>
     <section class="post-footer-item comment">
-        <div id="disqus_thread"></div>
 		<div id="gitalk_container"></div>
     </section>
   </section>
 
-  {% include footer.html %}
-<--<script src="/assets/js/gitalk.min.js"></script>-->
   <script src="/assets/js/social-share.min.js"></script>
   <script>
     socialShare('.social-share', {
@@ -121,7 +118,7 @@
       wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
     });
   </script>
-
+<script src="/assets/js/gitalk.min.js"></script>
   <script>
     var gitalk = new Gitalk({
       clientID: '{{ site.comments.clientID }}',
