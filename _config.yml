@@ -30,7 +30,6 @@ nightMode: true
 
 # Comments 评论功能
 comments: 
-    gitalk:true
     gitalk:
         owner: justd
         admin: IsZhangjd@outlook.com
