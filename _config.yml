@@ -33,7 +33,7 @@ comments:
     gitalk: true
     owner: justd
     admin: justd
-    repo: blog-comments
+    repo: Document
     clientID: cb7b6e6e791ee7a59931
     clientSecret: b564d87c30bc313bf3f060fa198b0661ad304900
     
