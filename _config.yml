@@ -35,9 +35,9 @@ b2t: true
 # Comments 评论功能
 comments: 
     gitalk: true
-    owner: justde
-    admin: justde
-    repo: blog-comments
+    owner: IsZhangjd@outlook.com
+    admin: IsZhangjd@outlook.com
+    repo: justde.github.io
     clientID: 7e02ff331c24aa89ee02
     clientSecret: 31bb5bf2568ac7ae0bad70ea83f6e9f9b28f2589
     
