@@ -79,8 +79,13 @@ highlighter: rouge
 kramdown:
   input: GFM
 
-# RSS
+# SNS settings
 RSS: false
+#jianshu_username:
+#zhihu_username:
+#facebook_username:
+github_username:    IsZhangjd@outlook.com
+weibo_username:   bestjd
 
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
