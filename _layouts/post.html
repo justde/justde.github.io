@@ -130,7 +130,7 @@
       admin: '{{ site.comments.admin }}',
       id: location.pathname,  
       perPage: 50,
-      distractionFreeMode: false  
+      distractionFreeMode: '{{ site.comments.distractionFreeMode }}'
     })
     gitalk.render('gitalk_container')
   </script>
