@@ -848,7 +848,7 @@ a {
 
 .markdown-body {
     font-family: Merriweather-Light, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    width: 720px;
+    /*width: 652px;*/
     box-sizing: border-box;
     padding: 0 0 32px
 }
@@ -1311,7 +1311,7 @@ a {
     }
 
     .author-detail .comment {
-        width: 60%
+        width: 90%
     }
 
     .read-next {
