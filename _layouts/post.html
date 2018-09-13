@@ -98,17 +98,20 @@
       </div>
       {% endif %}
     </section>
-	  {% if site.recommend-tags and site.tags.size>0 %}
-            <section class="tags-card">
-                {% for tag in site.tags %}
-                    {% if forloop.index > site.recommend-condition-size %}
-                        {% break %}
-                    {% endif %}
-                    <a href="{{ "tags.html#" | append: tag[0] | prepend: site.baseurl }}" class="tag">{{ tag[0]}}</a>
-                {% endfor %}
-            </section>
-            {% endif %}
-	
+    <div class="col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+    {% if site.recommend-tags and site.tags.size>0 %}
+    <section class="tags-card">
+      {% for tag in site.tags %}
+      {% if forloop.index > site.recommend-condition-size %}
+      {% break %}
+      {% endif %}
+      <a href="{{ "tags.html#" | append: tag[0] | prepend: site.baseurl }}" class="tag">{{ tag[0]}}</a>
+      {% endfor %}
+    </section>
+    {% endif %}
+	</div>
     <section class="post-footer-item comment">
 		<div id="gitalk_container"></div>
     </section>
