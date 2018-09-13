@@ -80,7 +80,7 @@ kramdown:
   input: GFM
 
 # SNS settings
-RSS: false
+RSS: true
 #jianshu_username:
 #zhihu_username:
 #facebook_username:
