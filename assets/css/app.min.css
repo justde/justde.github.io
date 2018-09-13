@@ -848,7 +848,13 @@ a {
 
 .markdown-body {
     font-family: Merriweather-Light, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    /*width: 652px;*/
+    width: 720px;
+    box-sizing: border-box;
+    padding: 0 0 32px
+}
+.markdown-body .comment{
+    font-family: Merriweather-Light, -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    width: 640px;
     box-sizing: border-box;
     padding: 0 0 32px
 }
