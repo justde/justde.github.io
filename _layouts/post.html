@@ -98,42 +98,16 @@
       </div>
       {% endif %}
     </section>
-	  <!tag-->
-
-                <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-                    <!-- Featured Tags -->
-                    {% if site.featured-tags %}
-                    <section>
-                        <hr class="hidden-sm hidden-xs">
-                        <h5><a href="/tags.html">FEATURED TAGS</a></h5>
-                        <div class="tags">
-                            {% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                            <a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                {{ tag[0] }}
-                            </a>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </section>
+	  {% if site.recommend-tags and site.tags.size>0 %}
+            <section class="tags-card">
+                {% for tag in site.tags %}
+                    {% if forloop.index > site.recommend-condition-size %}
+                        {% break %}
                     {% endif %}
-
-                    <!-- Friends Blog -->
-                    {% if site.friends %}
-                    <hr>
-                    <h5>FRIENDS</h5>
-                    <ul class="list-inline">
-                        {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-
-    </section>
+                    <a href="{{ "tags.html#" | append: tag[0] | prepend: site.baseurl }}" class="tag">{{ tag[0]}}</a>
+                {% endfor %}
+            </section>
+            {% endif %}
 	
     <section class="post-footer-item comment">
 		<div id="gitalk_container"></div>
