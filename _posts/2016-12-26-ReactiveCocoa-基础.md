@@ -66,7 +66,7 @@ make.add(1).add(2).sub(5).muilt(-4).divide(4);
 
 NSObject+Caculator.h
 
-```
+```Swift
 # import <Foundation/Foundation.h>
 
 @class CaculatorMaker;
@@ -81,7 +81,7 @@ NSObject+Caculator.h
 
 NSObject+Caculator.m
 
-```
+```Swift
 @implementation NSObject (Caculator)
 
 + (int)makeCaculators:(void (^)(CaculatorMaker *))block {
@@ -98,7 +98,7 @@ NSObject+Caculator.m
 
 CaculatorMaker.h
 
-```
+```Swift
 # import <Foundation/Foundation.h>
 
 @class CaculatorMaker;
