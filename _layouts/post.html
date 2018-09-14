@@ -106,31 +106,6 @@
 
   <script src="/assets/js/social-share.min.js"></script>
 
-  <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ "/css/hux-blog.min.css" | prepend: site.baseurl }}">
-
-  <!-- Pygments Github CSS -->
-  <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
-  <section>
-    <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2
-                  col-md-10 col-md-offset-1 post-container">
-
-        <div class="post-tags">
-          {% if post.tags.size > 0 %}
-          {% for tag in post.tags  %}
-          <a href={{ "tags.html#" | append: tag | pretend: site.baseurl}} class="post-tag">{{ tag }}</a>
-          {% endfor %}
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
 
   <script>
     socialShare('.social-share', {
