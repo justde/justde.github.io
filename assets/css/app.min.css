@@ -1,11 +1,11 @@
 @font-face {
     font-family: Merriweather;
-    src: url(../fonts/glyphicons-halflings-regular.woff2)
+    src: url(../fonts/Merriweather-Black.ttf)
 }
 
 @font-face {
     font-family: Merriweather-Light;
-    src: url(../fonts/glyphicons-halflings-regular.woff)
+    src: url(../fonts/Merriweather-Light.ttf)
 }
 
 body, html {
