@@ -39,6 +39,24 @@
 
     <article class="markdown-body">
       {{ page.content }}
+      <section>
+
+        <div class="col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+          <div class="post-tags">
+            {% if post.tags.size > 0 %}
+            {% for tag in post.tags  %}
+            <a href={{ "tags.html#" | append: tag | pretend: site.baseurl}} class="post-tag">{{ tag }}</a>
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </section>
+  </div>
+  </div>
+  </section>
     </article>
 
     {% if site.social-share %}
@@ -115,10 +133,8 @@
   <!-- Pygments Github CSS -->
   <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
   <section>
-    <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2
-                  col-md-10 col-md-offset-1 post-container">
+
+      <div class="">
 
         <div class="post-tags">
           {% if post.tags.size > 0 %}
