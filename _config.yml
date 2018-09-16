@@ -9,8 +9,10 @@ baseurl: ''
 
 # Navigation links
 nav:
-  home: '/'
-  tags: '/tags.html'
+  主页: '/'
+  分类: '/tags.html'
+  时间轴: '/timeline.html'
+
 
 # Footer
 footer:
@@ -18,7 +20,7 @@ footer:
 
 # Author 配置博主信息
 author: 'justd'
-nickname: '悟空'
+nickname: '张敬东'
 bio: '后端开发者，热爱技术&设计，简单乐观爱创造'
 avatar: '/assets/img/Ja.png'
 
@@ -86,6 +88,12 @@ RSS: false
 featured-tags: true                     # 是否使用首页标签
 featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
 
+# 百度统计 在baidu-url里填写自己相关的url代码
+baidu: true
+baidu-url: '03ba3ea110808311ddd73fe63869b70f'
+# 谷歌分析 在google-ID里填写自己在谷歌分析获得的追踪ID
+google: false
+google-ID: ''
 
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
