@@ -1,5 +1,5 @@
 # Site settings 配置站点
-title: 'justd 的独立博客'
+title: 'Justd | Blog'
 description: 'I came; I saw; I conquered.'
 keyword: '张敬东 /后端 /java'
 url: https://justd.xyz
@@ -51,7 +51,7 @@ social-share: true
 social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
 
 # theme color 主题皮肤
-theme-color: 'pink'  # pink or default
+theme-color: 'default'  # pink or default
 
 # Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
 postPatterns: 'seaOfClouds'
