@@ -9,9 +9,9 @@ baseurl: ''
 
 # Navigation links
 nav:
-  home: '/'
-  tags: '/tags.html'
-  timeline: '/timeline.html'
+  主页: '/'
+  分类: '/tags.html'
+  时间轴: '/timeline.html'
 
 
 # Footer
