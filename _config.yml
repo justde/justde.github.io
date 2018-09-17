@@ -1,6 +1,6 @@
 # Site settings 配置站点
 title: 'Justd | Blog'
-description: 'I came; I saw; I conquered.'
+description: 'Yesterday you said tomorrow.'
 keyword: '张敬东 /后端 /java'
 url: https://justd.xyz
 
@@ -21,14 +21,14 @@ footer:
 # Author 配置博主信息
 author: 'justd'
 nickname: '张敬东'
-bio: '后端开发者，热爱技术&设计，简单乐观爱创造'
+bio: '后端开发者，热爱生活，热爱技术，努力、奋斗中'
 avatar: '/assets/img/Ja.png'
 
 # Search
 search: true
 
 # Night mode
-nightMode: true
+nightMode: flase
 
 
 b2t: true
