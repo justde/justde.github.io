@@ -3,7 +3,7 @@ layout: post
 title: 'Hello Jekyll'
 date: 2018-04-18
 author: Jekyll
-cover: '/screenshot/post-bg-github-cup.jpg'
+cover: 'https://ws1.sinaimg.cn/large/005TkhuCly1fvczqrzgzfj338o0xc0vj.jpg'
 tags: jekyll
 ---
 
