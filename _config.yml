@@ -28,7 +28,7 @@ avatar: '/assets/img/Ja.png'
 search: true
 
 # Night mode
-nightMode: flase
+nightMode: true
 
 
 b2t: true

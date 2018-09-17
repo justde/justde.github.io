@@ -1,6 +1,6 @@
 ## justd.github.io
 
-#### 基于 [H2O](https://github.com/kaeyleo/jekyll-theme-H2O) 的博客主题模板，简洁轻量。
+#### 基于 [kaeyleo](https://github.com/kaeyleo) 开发的 [H2O](https://github.com/kaeyleo/jekyll-theme-H2O) 博客主题模板，简洁轻量。
 
 
 
@@ -8,9 +8,8 @@
 
 #### [在线预览 Live Demo →](http://justd.xyz/)
 
-![](screenshot/jekyll-theme-h2o-realhome.jpg)
+![](/assets/img/readme/readme-home.png)
 
-![](screenshot/jekyll-theme-h2o-realm.png)
 
 如果你喜欢这个博客模板，请在右上角star一下，非常感谢～
 
@@ -18,7 +17,7 @@ If you like this theme or using it, please give a ⭐️ for motivation ;)
 
 如果想体验手机浏览效果，可以扫一下二维码：
 
-![](screenshot/1494404591.png)
+![](/assets/img/readme/phone.png)
 
 Using your smartphone to scan the QR Code
 
@@ -64,7 +63,7 @@ Using your smartphone to scan the QR Code
 
 点击右上角Fork按钮在你的Github上创建分支，或者```clone```到本地。
 
-``` git clone https://github.com/kaeyleo/jekyll-theme-H2O.git ```
+``` git clone https://github.com/justde/justde.github.io ```
 
 最后，在命令行输入 ```jekyll server``` 开启服务，就能在本地预览主题了。
 
@@ -127,10 +126,10 @@ You can easily get started by modifying _config.yml
 
 ```
 # Site settings
-title: '廖柯宇的独立博客' # 你的博客网站标题
+title: 'Justd | Blog' # 你的博客网站标题
 description: '很高兴能在这里与你分享我对技术和生活的思考。' # 站点描述
-keyword: '廖柯宇, 廖柯宇的独立博客, 前端, 设计' # 网站关键词
-url: 'http://liaokeyu.com' # 站点url
+keyword: '张敬东 /后端 /java' # 网站关键词
+url: 'https://justd.xyz' # 站点url
 baseurl: ''
 
 # Build settings
@@ -178,7 +177,6 @@ exclude: ['node_modules', 'dev', 'package.json', '自定义的文件夹名字']
 
 #### 侧边栏
 
-![](screenshot/jekyll-theme-h2o-sideBar.png)
 
 侧边栏分为两个部分：【个人简介】和【推荐标签】。当屏幕宽度小于960px时，侧边栏会被隐藏。
 
@@ -191,10 +189,10 @@ exclude: ['node_modules', 'dev', 'package.json', '自定义的文件夹名字']
 ```
 # SNS settings 配置社交网站url
 sns:
-  weibo: '//weibo.com/lovecolcol'
-  juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
-  instagram: '//www.instagram.com/steveliaocn'
-  github: '//github.com/kaeyleo'
+  weibo: '//weibo.com/bestjd'
+  juejin: ''
+  instagram: ''
+  github: '//github.com/justde'
 ```
 
 sns属性可选参数：
@@ -250,7 +248,6 @@ Tags配置说明：
 
 #### 文章搜索
 
-![](screenshot/jekyll-theme-h2o-search.png)
 
 基于Jekyll服务器生成文章索引文件 `search.json` 为博客提供搜索服务。输入文章标题或与文章标签相关的关键字即可。
 
@@ -317,7 +314,6 @@ nightMode: true
 
 #### 主题皮肤
 
-![](screenshot/jekyll-theme-h2o-themecolor.jpg)
 
 支持两种主题颜色蓝色（默认）和粉色
 
@@ -443,12 +439,10 @@ Any types of contribution are welcome. Thanks.
 
 接受各种形式的贡献，包括不限于提交问题与需求，修复代码。等待您的 ```Pull Request```
 
-#### 感谢参与代码贡献的伙伴
+#### 再次感谢本主题的作者
 
-- [Ray-Eldath](https://github.com/Ray-Eldath)
-- [sctop](https://github.com/sctop)
-- [bananaappletw](https://github.com/bananaappletw)
-- [moycat](https://github.com/moycat)
+- [kaeyleo](https://github.com/kaeyleo)
+
 
 ### License 许可证
 
