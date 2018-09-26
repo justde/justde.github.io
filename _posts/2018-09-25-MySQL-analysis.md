@@ -4,7 +4,7 @@ title: 'MySql语句执行分析'
 date: 2018-09-25
 author: Justd
 cover: '/assets/img/2018-9/09-25-mysql.png'
-tags: Linux 命令
+tags: MySQL 调优  Linux
 ---
 
 今天客户那边遇到一个问题：多选文件进行操作，数据量一大后台处理就特别慢，浏览器显示504超时。为了验证问题是否出在sql语句，所以用以下方法来分析：
