@@ -20,7 +20,8 @@ tags: MySQL 调优  Linux
 ```SQL
 show variables LIKE 'general%';
 ```
-[]  待图  
+![](/assets/img/2018-9/09-25/general_log.png)     
+ 
 general_log:日志记录功能是否开启，默认为OFF   
 general_log_file:日志存放路径    
 
@@ -39,7 +40,8 @@ set GLOBAL general_log = 'ON';
 >explain + SQL语句    
 
 输出：
-[]  待图
+![](/assets/img/2018-9/09-25/explain.png)     
+
 
 ### 参数解析
 <table border="1" cellspacing="0" cellpadding="0">
@@ -209,7 +211,7 @@ show profile 以及show profiles语句可以显示当前会话过程中执行SQL
 ```SQL
 show variables like '%profil%';
 ```
-[] 待图
+![](/assets/img/2018-9/09-25/profiling.png)   
 profiling:OFF 默认此功能关闭
 
 ### 设置开启状态
@@ -217,7 +219,7 @@ profiling:OFF 默认此功能关闭
 set profiling = 1;
 ```
 再次查看[是否开启](#查看profile是否开启)    
-[]  待图    
+![](/assets/img/2018-9/09-25/open-profiling.png)     
 已经是开启状态
 
 
@@ -226,14 +228,15 @@ set profiling = 1;
 ```SQL
 show profiles；
 ```
-即可查看所有的sql的执行时间
-[]待图
+即可查看所有的sql的执行时间    
+![](/assets/img/2018-9/09-25/sql.png)     
 
 ```SQL
 show profile for query 1 
 ``` 
- 查看第1个sql语句的执行的各个操作的耗时详情。
- []待图
+ 查看第1个sql语句的执行的各个操作的耗时详情。   
+ ![](/assets/img/2018-9/09-25/time.png)     
+
 
 ```SQL
 show profile cpu, block io, memory,swaps,context switches,source for query 6;
