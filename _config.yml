@@ -62,7 +62,7 @@ postPatterns: 'seaOfClouds'
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
   weibo: '//weibo.com/bestjd'
-  juejin: '//'
+  juejin: '//https://juejin.im/user/5b45dc78e51d4519873f275a'
   instagram: ''
   github: '//github.com/justde'
 
