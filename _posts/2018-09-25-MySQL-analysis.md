@@ -251,3 +251,7 @@ show profile all for query 6 查看第6条语句的所有的执行信息。
 ``` SQL
 mysql> set profiling=0
 ```
+
+
+# 慢查询
+待整理
