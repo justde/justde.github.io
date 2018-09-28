@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'MySql语句执行分析'
+title: 'MySQL语句执行分析'
 date: 2018-09-25
 author: Justd
 cover: '/assets/img/2018-9/09-25-mysql.png'
@@ -309,5 +309,5 @@ set global long_query_time=1;
     1 row in set (3.00 sec)
     ```
 - 查看日志记录
-![](/assets/img/2018-9/09-25/profiling.png)
+![](/assets/img/2018-9/09-25/slow.png)
 可以查看到涉及到超过1S的SQL详情
