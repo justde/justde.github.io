@@ -254,4 +254,60 @@ mysql> set profiling=0
 
 
 # 慢查询
-待整理
+
+开启慢查询，可以设置一个时间阈值，当sSQL执行时间超过阈值，则会被记录。通过这样可以定位到需要优化的SQL
+
+### 查看慢查询命令
+```sql
+mysql> show variables like 'slow_query%';
++---------------------+--------------------------------------+
+| Variable_name       | Value                                |
++---------------------+--------------------------------------+
+| slow_query_log      | OFF                                  |
+| slow_query_log_file | /var/lib/mysql/50aacb0262cd-slow.log |
++---------------------+--------------------------------------+
+```
+```sql
+mysql> show variables like 'long_query_time';
++-----------------+-----------+
+| Variable_name   | Value     |
++-----------------+-----------+
+| long_query_time | 10.000000 |
++-----------------+-----------+
+```
+### 参数说明：
+slow_query_log :是否开启慢查询
+slow_query_log_file :慢查询日志存放位置
+long_query_time:设置阈值，超过该值才会做记录
+
+
+### 设置步骤
+开启慢查询
+```sql
+set global slow_query_log='ON';
+```
+
+设置存放日志位置
+```sql
+set global slow_query_log_file='/var/lib/mysql/slow.log ';
+```
+
+设置超时时间
+```sql
+set global long_query_time=1;
+```
+
+### 日志效果
+- 首先我执行一句SQL
+    ```sql
+    mysql> select sleep(3);
+    +----------+
+    | sleep(3) |
+    +----------+
+    |        0 |
+    +----------+
+    1 row in set (3.00 sec)
+    ```
+- 查看日志记录
+![](/assets/img/2018-9/09-25/profiling.png)
+可以查看到涉及到超过1S的SQL详情
