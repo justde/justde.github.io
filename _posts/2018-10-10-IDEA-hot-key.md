@@ -9,7 +9,9 @@ tags: Idea 快捷键
 
 
 F2 跳到下一个高亮错误   
-F4 进入此方法   
+
+F4 进入此方法  
+ 
 Ctrl+shift+alt +C    
 复制当前位置   
 
