@@ -142,15 +142,21 @@ public class BreakfastTest {
         System.out.println("order1 price "+jianBingGuoZi.cost());
 
         System.out.println("``````````````````````````````");
-        Food food = new ShouZhuoBing();
-        food = new Egg(food);
-        food = new Sausage(food);
+        Food food = new ShouZhuoBing();①
+        food = new Egg(food);②
+        food = new Sausage(food);③
         System.out.println("order2 desc: "+food.getDescription());
         System.out.println("order2 price "+food.cost());
     }
 }
 ```
-![](/assets/img/2018-10/16/test.png)
+![](/assets/img/2018-10/16/test.png)    
+这个例子可以抽象的理解为下图   
+![](/assets/img/2018-10/16/ex.png)    
+
+①行new了手抓饼这个对象，然后根据Decorator的属性可以知道，配料中包含有food这个属性，因此②中的鸡蛋实例包含了手抓饼这个food实例，接着③行将鸡蛋+手抓饼作为一个food实例，共同作为香肠的一个属性，继续封装香肠对象，因此最后的food对象包含以下信息：   
+![](/assets/img/2018-10/16/food.png)  
+
 
 <h3> 从上面的代码中我们可以看出使用装饰者后，我们无论需要什么配料都可以累加，假如有一天有了大饼鸡蛋或者配料添加了肉松，只需要按照上面类似加入新的类就可以，不用修改父类或者大量改动已有的代码。
 
