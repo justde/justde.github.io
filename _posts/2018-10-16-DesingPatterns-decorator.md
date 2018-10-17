@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '设计模式之装饰者模式'
+title: '设计模式学习笔记之装饰者模式'
 date: 2018-10-16
 author: Justd
 cover: '/assets/img/2018-10/16/tag.jpg'
