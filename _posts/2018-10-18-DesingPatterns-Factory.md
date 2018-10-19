@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '设计模式学习笔记之工厂模式'
-date: 2018-10-16
+date: 2018-10-18
 author: Justd
 cover: '/assets/img/2018-10/16/tag.jpg'
 tags: Java   
