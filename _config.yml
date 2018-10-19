@@ -2,7 +2,7 @@
 title: 'Justd | Blog'
 description: 'Yesterday you said tomorrow.'
 keyword: '张敬东 /后端 /java'
-url: justd.xyz
+url: 'justd.xyz'
 
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
