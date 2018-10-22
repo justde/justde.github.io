@@ -158,7 +158,15 @@ public class BreakfastTest {
 ![](/assets/img/2018-10/16/food.png)  
 
 
-<h3> 从上面的代码中我们可以看出使用装饰者后，我们无论需要什么配料都可以累加，假如有一天有了大饼鸡蛋或者配料添加了肉松，只需要按照上面类似加入新的类就可以，相当于在最外层包装上新的一层，不用修改父类或者大量改动已有的代码。
+<h3> 从上面的代码中我们可以看出使用装饰者后，我们无论需要什么配料都可以累加，假如有一天有了大饼鸡蛋或者配料添加了肉松，只需要按照上面类似加入新的类就可以，相当于在最外层包装上新的一层，不用修改父类或者大量改动已有的代码。     
+
+
+>本文代码例子来源：《head-first设计模式》  
+
+设计模式学习系列：   
+[基本概念](https://justd.xyz/2018/10/17/DesingPatterns-outline.html)    
+[工厂模式](https://justd.xyz/2018/10/18/DesingPatterns-Factory.html)   
+[装饰者模式](https://justd.xyz/2018/10/16/DesingPatterns-decorator.html)
 
 
 

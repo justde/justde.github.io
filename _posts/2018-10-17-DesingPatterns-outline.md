@@ -110,7 +110,12 @@ tags: Java
 
 
 ---   
-来源于[《Head-First设计模式》](https://share.weiyun.com/570mvPm)
+>本文代码例子来源于[《Head-First设计模式》](https://share.weiyun.com/570mvPm)    
+
+设计模式学习系列：   
+[基本概念](https://justd.xyz/2018/10/17/DesingPatterns-outline.html)    
+[工厂模式](https://justd.xyz/2018/10/18/DesingPatterns-Factory.html)   
+[装饰者模式](https://justd.xyz/2018/10/16/DesingPatterns-decorator.html)
 
 
 
