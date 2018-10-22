@@ -94,7 +94,7 @@ public class OrderPizza {
 整个过程如下：   
 顾客根据披萨的种类进行点餐，然后根据类型进行创建披萨对象，进行准备、烘焙、剪切、打包
 
-很明显，这样设计是有问题的。如果店里有了新品，或者下架某种类披萨，就要修改OrderPizza类中根据顾客输入来创建对象这段代码，显然是违背[上文](https://justd.xyz/2018/10/17/DesingPatterns-outline.html)提到的开放封闭原则。如下代码，现在我们已经知道哪些会改变，哪些不会改变，是时候使用封装了。
+很明显，这样设计是有问题的。如果店里有了新品，或者下架某种类披萨，就要修改OrderPizza类中根据顾客输入来创建对象这段代码，显然是违背[上文](https://justd.xyz/2018/10/17/DesingPatterns-outline.html)提到的开放封闭原则。如下代码，现在我们已经知道哪些会改变，哪些不会改变，是时候使用封装了。      
 ```Java
 //需要修改
 if ("greek".equals(type)){
@@ -109,7 +109,7 @@ pizza.prepare();
 pizza.bake();
 pizza.cut();
 pizza.box();
-```
+```    
 # 简单披萨工厂    
 现在最好将创建对象移到orderPizza()之外，但怎么做呢？我们可以把创建披萨的代码移到另一个对象中，由这个新对象专职创建披萨。
 我们称这个新对象为“工厂”。    
@@ -131,7 +131,7 @@ public class SimpleFactoryPizza {
     }
 }
 ```
->新的order只需构造时传入一个工厂，然后带入订单类型来使用工厂创建披萨，代替之前具体的实例化
+>新的order只需构造时传入一个工厂，然后带入订单类型来使用工厂创建披萨，代替之前具体的实例化    
 ```Java
 public class OrderPizza {
     SimpleFactoryPizza factory;
