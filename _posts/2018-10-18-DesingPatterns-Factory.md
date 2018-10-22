@@ -110,7 +110,7 @@ pizza.bake();
 pizza.cut();
 pizza.box();
 ```
-# 简单披萨工厂   
+# 简单披萨工厂    
 现在最好将创建对象移到orderPizza()之外，但怎么做呢？我们可以把创建披萨的代码移到另一个对象中，由这个新对象专职创建披萨。
 我们称这个新对象为“工厂”。    
 工厂（factory）处理创建对象的细节。一旦有了SimplePizzaFactory，orderPizza()就变成此对象的客户。当需要披萨时，就叫披萨工厂做一个。那些orderPizza()方法需要知道希腊披萨或者蛤蜊披萨的日子一去不复返了。现在orderPizza()方法只关心从工厂得到了一个披萨，而这个披萨实现了Pizza接口，所以它可以调用prepare()、bake()、cut()、box()来分别进行准备、烘烤、切片、装盒。    
@@ -131,33 +131,37 @@ public class SimpleFactoryPizza {
     }
 }
 ```
->新的order只需要简单传入订单类型来使用工厂创建披萨，代替之前具体的实例化
+>新的order只需构造时传入一个工厂，然后带入订单类型来使用工厂创建披萨，代替之前具体的实例化
 ```Java
 public class OrderPizza {
-    OrderPizza(SimpleFactoryPizza factory){
-        String type=null;
-        Pizza pizza=null;
-        do {
-            type=getType();
-            pizza=factory.createPizza(type);
-            if (pizza!=null) {
-                pizza.prepare();
-                pizza.bake();
-                pizza.cut();
-                pizza.box();
-            }else{
-                break;
-            }
-        } while (true);
+    SimpleFactoryPizza factory;
+
+    public OrderPizza(SimpleFactoryPizza factory) {
+        this.factory = factory;
     }
+
+    Pizza orderPizza(String type) {
+        Pizza pizza = null;
+        pizza = factory.createPizza(type);
+        if (pizza != null) {
+            pizza.prepare();
+            pizza.bake();
+            pizza.cut();
+            pizza.box();
+        }
+        return pizza;
+
+    }
+
 }
+
 ```
 虽然看似代码同传统方式一样，但是我们已经将变化的代码抽取出来了，在OrderPizza中我们无需再次修改，此时我们已经将变化的和不变化的隔离开来了。   
 
-# 抽象披萨工厂   
+# 工厂模式     
 如果披萨店生意越来越好，考虑开几家加盟店。身为加盟公司的经营者，你希望确保加盟店的运营质量，还希望各地的披萨有自己不同的区域特点。在推广SimpleFactoryPizza时，发现加盟店采用的统一的工厂创建的披萨，但是其他部分却开始采用自创的流程，比如烘烤方式，包装方式等等。那么如果建立一个框架，约束关键步骤的同时又能保持一定的弹性呢？
 ### 修改给披萨店使用的框架   
-有一个办法可以让披萨制作活动局限于PizzaStore类，同时让不同的店还拥有自己的特色。    
+有一个办法可以让披萨制作活动局限于OrderPizza类，同时让不同的店还拥有自己的特色。    
 所要做的事情就是把createPizza()方法放回到OrderPizza中，不过得将它设置成抽象方法，然后为每个店铺创建一个OrderPizza的子类。
 来看下修改后的OrderPizza：
 ```Java
@@ -186,6 +190,7 @@ OrderPizza已经有一个不错的订单系统，由orderPizza()负责处理订�
 // 因为此类的createPizza()方法会建立纽约风味的披萨
 public class NyStyleOrderPizza extends OrderPizza{
  
+    //子类自己定义创建披萨方法
     @Override
     Pizza createPizza(String type) {
         Pizza pizza = null;
@@ -215,7 +220,7 @@ public class ChicagoStyleOrderPizza extends OrderPizza{
 }
 ```   
 现在问题来了，OrderPizza的子类终究只是子类，如何能够做决定？在NyStyleOrderPizza类中，并没有看到任何做决定逻辑的代码。
-关于这个方面，要从OrderPizza的orderPizza()方法观点来看，此方法在抽象的OrderPizza内定义，但是只在子类中实现具体类型。
+关于这个方面，要从OrderPizza类的orderPizza()方法观点来看，此方法在抽象的OrderPizza内定义，但是只在子类中实现具体类型。
 orderPizza()方法对对象做了许多事情（例如：准备、烘烤、切片、装盒），但由于Pizza对象是抽象的，orderPizza()并不知道哪些实际的具体类参与进来了。换句话说，这就是解耦（decouple）！
 当orderPizza()调用createPizza()时，某个披萨店子类将负责创建披萨。做哪一种披萨呢？当然是由具体的披萨店决定。
 那么，子类是实时做出这样的决定吗？不是，但从orderPizza()的角度看，如果选择在NyStyleOrderPizza订购披萨，就是由这个子类（NyStyleOrderPizza）决定。严格来说，并非由这个子类实际做“决定”，而是由“顾客”决定哪一家风味的披萨店才决定了披萨的风味。   
@@ -225,14 +230,26 @@ public class test {
     public static void main(String[] args) {
         OrderPizza orderPizza = new NyStyleOrderPizza();
         Pizza pi = orderPizza.orderPizza("cheese");
+        System.out.println("-------");
         Pizza pizza = orderPizza.orderPizza("veggie");
     }
 }
 ```
+
+
+
 执行结果如下：   
->NyStyleCheesePizza baking;    
-NyStyleCheesePizza cutting;    
-NyStyleCheesePizza boxing;    
-NyStyleVeggiePizza baking;    
-NyStyleVeggiePizza cutting;    
-NyStyleVeggiePizza boxing;    
+```java
+Preparing NyStyleCheesePizza baking;
+Preparing NyStyleCheesePizza cutting;
+Preparing NyStyleCheesePizza boxing;
+-------
+Preparing NyStyleVeggiePizza baking;
+Preparing NyStyleVeggiePizza cutting;
+Preparing NyStyleVeggiePizza boxing;
+```
+
+---
+设计模式学习系列：   
+[基本概念](https://justde.github.io/2018/10/17/DesingPatterns-outline.html)   
+[装饰者模式](https://justde.github.io/2018/10/16/DesingPatterns-decorator.html)
