@@ -132,6 +132,7 @@ public class SimpleFactoryPizza {
 }
 ```
 >新的order只需构造时传入一个工厂，然后带入订单类型来使用工厂创建披萨，代替之前具体的实例化    
+
 ```Java
 public class OrderPizza {
     SimpleFactoryPizza factory;
