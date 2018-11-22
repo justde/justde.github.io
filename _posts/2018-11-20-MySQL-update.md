@@ -3,11 +3,12 @@ layout: post
 title: 'MySQL系列之一条更新SQL的生命历程'
 date: 2018-11-20
 author: Justd
-cover: ''
+cover: '/assets/img/2018-11/21/timg.jpg'
 tags:  MySQL  
 ---
 # MySQL系列之一条更新SQL的生命历程
- 
+      
+
 >听说MySQL能恢复到半个月内任意一秒的状态    
 
 要从一条更新语句说起，如果将ID=2这一行的值+1，SQL语句可以这样写：
