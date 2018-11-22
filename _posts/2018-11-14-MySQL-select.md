@@ -115,4 +115,7 @@ select SQL_CACHE * from T where ID = 10;
 预处理器：进一步检查解析树的合法性，比如：数据表和数据列是否存在，别名是否有歧义等。如果通过则生成新的解析树，在提交给优化器。
 
 - Connect_timeout 指的是“连接过程中”的等待时间
-- wait_timeout指的是“连接完成后，使用过程中”的等待时间
+- wait_timeout指的是“连接完成后，使用过程中”的等待时间    
+  
+>感谢《MySQL实践》提供的图与知识点    
+第一节：[MySQL系列之一条更新SQL的生命历程](https://justde.github.io/2018/11/14/MySQL-select.html)
