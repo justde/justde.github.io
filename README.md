@@ -6,7 +6,7 @@
 
 ### Preview
 
-#### [在线预览 Live Demo →](http://justd.xyz/)
+#### [在线预览 Live Demo →](http://justde.github.io/)
 
 ![](/assets/img/readme/readme-home.png)
 
@@ -129,7 +129,7 @@ You can easily get started by modifying _config.yml
 title: 'Justd | Blog' # 你的博客网站标题
 description: '很高兴能在这里与你分享我对技术和生活的思考。' # 站点描述
 keyword: '张敬东 /后端 /java' # 网站关键词
-url: 'https://justd.xyz' # 站点url
+url: 'https://justde.github.io' # 站点url
 baseurl: ''
 
 # Build settings

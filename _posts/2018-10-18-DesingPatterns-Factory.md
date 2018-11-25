@@ -94,7 +94,7 @@ public class OrderPizza {
 整个过程如下：   
 顾客根据披萨的种类进行点餐，然后根据类型进行创建披萨对象，进行准备、烘焙、剪切、打包
 
-很明显，这样设计是有问题的。如果店里有了新品，或者下架某种类披萨，就要修改OrderPizza类中根据顾客输入来创建对象这段代码，显然是违背[上文](https://justd.xyz/2018/10/17/DesingPatterns-outline.html)提到的开放封闭原则。如下代码，现在我们已经知道哪些会改变，哪些不会改变，是时候使用封装了。      
+很明显，这样设计是有问题的。如果店里有了新品，或者下架某种类披萨，就要修改OrderPizza类中根据顾客输入来创建对象这段代码，显然是违背[上文](https://justde.github.io/2018/10/17/DesingPatterns-outline.html)提到的开放封闭原则。如下代码，现在我们已经知道哪些会改变，哪些不会改变，是时候使用封装了。      
 ```Java
 //需要修改
 if ("greek".equals(type)){
@@ -252,6 +252,6 @@ Preparing NyStyleVeggiePizza boxing;
 >本文代码例子来源：《head-first设计模式》  
 
 设计模式学习系列：   
-[基本概念](https://justd.xyz/2018/10/17/DesingPatterns-outline.html)    
-[工厂模式](https://justd.xyz/2018/10/18/DesingPatterns-Factory.html)   
-[装饰者模式](https://justd.xyz/2018/10/16/DesingPatterns-decorator.html)
+[基本概念](https://justde.github.io/2018/10/17/DesingPatterns-outline.html)    
+[工厂模式](https://justde.github.io/2018/10/18/DesingPatterns-Factory.html)   
+[装饰者模式](https://justde.github.io/2018/10/16/DesingPatterns-decorator.html)
