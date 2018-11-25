@@ -118,4 +118,4 @@ select SQL_CACHE * from T where ID = 10;
 - wait_timeout指的是“连接完成后，使用过程中”的等待时间    
   
 >感谢《MySQL实践》提供的图与知识点    
-第一节：[MySQL系列之一条更新SQL的生命历程](https://justde.github.io/2018/11/14/MySQL-select.html)
+第二节：[MySQL系列之一条更新SQL的生命历程](https://justde.github.io/2018/11/14/MySQL-select.html)
