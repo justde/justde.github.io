@@ -54,4 +54,4 @@ docker exec -ti mysql bash
 ![](/assets/img/2018-9/09-26/exec.png)
 
 
-参考：[常见的docker命令](https://justde.github.io/2018/09/27/Common-docker-commands.html)
+参考：[常见的docker命令](https://yvge.ml/2018/09/27/Common-docker-commands.html)

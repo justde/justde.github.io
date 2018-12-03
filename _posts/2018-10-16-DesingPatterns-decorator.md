@@ -164,9 +164,9 @@ public class BreakfastTest {
 >本文代码例子来源：《head-first设计模式》  
 
 设计模式学习系列：   
-[基本概念](https://justde.github.io/2018/10/17/DesingPatterns-outline.html)    
-[工厂模式](https://justde.github.io/2018/10/18/DesingPatterns-Factory.html)   
-[装饰者模式](https://justde.github.io/2018/10/16/DesingPatterns-decorator.html)
+[基本概念](https://yvge.ml/2018/10/17/DesingPatterns-outline.html)    
+[工厂模式](https://yvge.ml/2018/10/18/DesingPatterns-Factory.html)   
+[装饰者模式](https://yvge.ml/2018/10/16/DesingPatterns-decorator.html)
 
 
 
