@@ -15,7 +15,7 @@ tags:  MySQL
 ```sql
 mysql> update T set c=c+1 where ID=2;
 ```
-执行一条更新语句同样会走一遍[查询语句](https://yvge.ml/2018/11/14/MySQL-select.html)的流程:
+执行一条更新语句同样会走一遍[查询语句](https://yuge.ml/2018/11/14/MySQL-select.html)的流程:
 - **连接**数据库
 - 清空该表涉及到的**缓存**
 - **分析器**通过词法和语法解析出这是一条更新语句，并确定涉及到表与字段
@@ -106,7 +106,7 @@ redo log与bin log日志的区别：
 
 ----
 >感谢《MySQL实践》提供的图与知识点    
-第三节：[ACID之 事务隔离](https://yvge.ml/2018/11/25/MySQL-3.html)
+第三节：[ACID之 事务隔离](https://yuge.ml/2018/11/25/MySQL-3.html)
 
 [^1]:redo log不是记录数据页“更新之后的状态”，而是记录这个页 “做了什么改动”。     
 bin log有两种模式，statement 格式的话是记sql语句;   row格式会记录行的内容，记两条，更新前和更新后都有。

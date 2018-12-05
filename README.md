@@ -6,7 +6,7 @@
 
 ### Preview
 
-#### [在线预览 Live Demo →](http://yvge.ml/)
+#### [在线预览 Live Demo →](http://yuge.ml/)
 
 ![](/assets/img/readme/readme-home.png)
 
@@ -63,7 +63,7 @@ Using your smartphone to scan the QR Code
 
 点击右上角Fork按钮在你的Github上创建分支，或者```clone```到本地。
 
-``` git clone https://github.com/justde/yvge.ml ```
+``` git clone https://github.com/justde/yuge.ml ```
 
 最后，在命令行输入 ```jekyll server``` 开启服务，就能在本地预览主题了。
 
@@ -129,7 +129,7 @@ You can easily get started by modifying _config.yml
 title: 'Justd | Blog' # 你的博客网站标题
 description: '很高兴能在这里与你分享我对技术和生活的思考。' # 站点描述
 keyword: '张敬东 /后端 /java' # 网站关键词
-url: 'https://yvge.ml' # 站点url
+url: 'https://yuge.ml' # 站点url
 baseurl: ''
 
 # Build settings

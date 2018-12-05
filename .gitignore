@@ -4,7 +4,7 @@
 node_modules
 
 _site
-.idea/yvge.ml.iml
+.idea/yuge.ml.iml
 .idea/markdown-navigator.xml
 .idea/modules.xml
 .idea/vcs.xml
