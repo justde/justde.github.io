@@ -37,8 +37,8 @@ b2t: true
 # Comments 评论功能
 comments: 
     gitalk: true
-    owner: 'justde'
-    admin: 'justde'
+    owner: 'yvge'
+    admin: 'yvge'
     repo: 'https://yvge.ml'
     clientID: '18979b8f87148ef7c811'
     clientSecret: 'ce6cec05e76ca04c706ee0f0ae49908169d76a71'
