@@ -39,7 +39,7 @@ comments:
     gitalk: true
     owner: 'yvge'
     admin: 'yvge'
-    repo: 'https://yvge.ml'
+    repo: 'blog-comments'
     clientID: '18979b8f87148ef7c811'
     clientSecret: 'ce6cec05e76ca04c706ee0f0ae49908169d76a71'
     distractionFreeMode: true
