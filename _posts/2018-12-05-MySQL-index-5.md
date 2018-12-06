@@ -104,7 +104,9 @@ select * from tuser where name like '张%' and age = 23;
 >查询语句中where里面顺序和联合索引顺序不一致，优化器会自动做优化。
 ----
 
->本文为极客时间《MySQL实战45讲》的学习笔记，其中含有部分原文，如有侵权行为请联系我立刻删除    
+>本文为极客时间[《MySQL实战45讲》](http://gk.link/a/101tc) 的学习笔记，其中含有部分原文，如有侵权行为请联系我立刻删除   
+为丁奇大佬宣传一下   
+![](http://upload-images.jianshu.io/upload_images/2998394-29d07d10798776a0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
 第一节：[一条SQL查询语句的执行过程](https://yuge.ml/2018/11/14/MySQL-select.html)
 
 
