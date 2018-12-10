@@ -90,7 +90,7 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 
 # 百度统计 在baidu-url里填写自己相关的url代码
 baidu: true
-baidu-url: '03ba3ea110808311ddd73fe63869b70f'
+baidu-url: '022305d52aca9f43dcc1fbf069a9b26c'
 # 谷歌分析 在google-ID里填写自己在谷歌分析获得的追踪ID
 google: false
 google-ID: ''
