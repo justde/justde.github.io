@@ -62,3 +62,48 @@ java中的线程池是通过executor框架实现的，该框架中用到了Execu
   以上三段代码可知，线程池的构造都是从一个方法而来: `ThreadPoolExecutor` 
 
 ### ThreadPoolExector
+由以上三段代码可知，在Exectors内部创建线程池ide时候，实际创建的都是一个ThreadPoolExecutor对象，只是对ThreadPoolExecutor构造方法，进行了默认值的设定。其构造方法如下：
+```java
+public ThreadPoolExecutor(int corePoolSize,
+                              int maximumPoolSize,
+                              long keepAliveTime,
+                              TimeUnit unit,
+                              BlockingQueue<Runnable> workQueue,
+                              ThreadFactory threadFactory,
+                              RejectedExecutionHandler handler) {
+        if (corePoolSize < 0 ||
+            maximumPoolSize <= 0 ||
+            maximumPoolSize < corePoolSize ||
+            keepAliveTime < 0)
+            throw new IllegalArgumentException();
+        if (workQueue == null || threadFactory == null || handler == null)
+            throw new NullPointerException();
+        this.acc = System.getSecurityManager() == null ?
+                null :
+                AccessController.getContext();
+        this.corePoolSize = corePoolSize;
+        this.maximumPoolSize = maximumPoolSize;
+        this.workQueue = workQueue;
+        this.keepAliveTime = unit.toNanos(keepAliveTime);
+        this.threadFactory = threadFactory;
+        this.handler = handler;
+    }
+
+```
+参数含义如下：   
+- corePoolSize:常驻核心线程数
+- maximumPoolSize:线程池中能够容纳同时执行的最大线程数，必须大于等于1
+- workQueue:任务队列，被提交到那时尚未被执行的任务
+- keepAliveTime:线程空闲时间长度，即非核心线程，当队列中排队的任务过多，会创建出来小于等于最大线程数的线程作为临时线程来执行队列中的任务，如果这类临时线程空闲时间超过keepAliveTime，则会被销毁，只剩下核心线程数     
+- unit 空闲时间的单位
+- threadFactory 线程工厂，用于创建线程一般用默认的即可
+- RejectedExecutionHandler 拒绝策略，表示当队列满了并且工作线程大于等于线程吃的最大线程数时，应对再接收到的线程的策略  
+
+根据阿里巴巴编码规约，不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式创建，这样让写的同学更加明确线程池的运行规则，避免资源耗尽的风险。
+executors各个方法的弊端：
+1. newFixedThreadPool和newSingleThreadExecutor:    
+   主要问题是堆积的请求处理队列可能会耗费非常大的内存，甚至OOM
+2. newCachedThreadPool和newScheduledThreadPool:   
+   主要问题是线程数最大数是Integer.MAX_VALUE,可能会创建数量非常多的线程，甚至OOM   
+
+
