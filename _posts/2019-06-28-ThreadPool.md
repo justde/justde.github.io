@@ -99,11 +99,34 @@ public ThreadPoolExecutor(int corePoolSize,
 - threadFactory 线程工厂，用于创建线程一般用默认的即可
 - RejectedExecutionHandler 拒绝策略，表示当队列满了并且工作线程大于等于线程吃的最大线程数时，应对再接收到的线程的策略  
 
+参数使用场景：
+![](/assets\img\2019-06\ThreadPool.png)
+1. 创建线程池后，等待提交过来的任务请求
+2. 当调用execute()方法添加一个请求任务时，线程池会做如下判断：    
+   1. 如果正在运行的线程数小于`corePoolSize`时，创建新的线程运行这个任务
+   2. 如果正在运行的线程数大于等于`corePoolSize`,那么把任务放入`队列`中
+   3. 如果这时队列满了，且正在运行的线程数小于`maximumPool`，那么还要创建`非核心线程`运行这个任务
+   4. 如果线程数已经达到maximumPool，那么线程池会启动`饱和拒绝策略`来执行。
+3. 当一个线程执行任务完成，他会从队列中取出下一个任务来执行
+4. 当一个线程空闲超过`keepAliveTime`，线程池会判断 如果当前运行线程数大于corePoolSize，则线程被销毁
+5. 线程池所有任务完成后，最终会收缩到corePoolSize（）
+
+### 线程拒绝策略   
+当队列满了而且线程数已经达到maximumPoolSize,接下来的线程会受到拒绝策略的管控
+拒绝策略有四种：
+- AbortPolicy(默认):直接抛出RejectedExecutionException一场阻止系统正常运行   
+- CallerRunsPolicy:"调用者运行"一种调节机制，该策略既不会抛弃任务，也不会抛出异常，而是将某些任务回退到调用者那里，从而降低新任务的流量
+- DiscardOldestPolicy:抛弃队列中等待最久的任务，然后把当前任务加入队列中尝试再次提交当前任务   
+- DiscardPolicy:直接丢弃任务，不予任何处理也不抛出异常。如果允许任务丢失，这是最好的一种方案
+
+## 使用建议
 根据阿里巴巴编码规约，不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式创建，这样让写的同学更加明确线程池的运行规则，避免资源耗尽的风险。
 executors各个方法的弊端：
 1. newFixedThreadPool和newSingleThreadExecutor:    
    主要问题是堆积的请求处理队列可能会耗费非常大的内存，甚至OOM
 2. newCachedThreadPool和newScheduledThreadPool:   
    主要问题是线程数最大数是Integer.MAX_VALUE,可能会创建数量非常多的线程，甚至OOM   
+
+
 
 
