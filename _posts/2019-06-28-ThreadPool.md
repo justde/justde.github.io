@@ -119,11 +119,23 @@ public ThreadPoolExecutor(int corePoolSize,
 - DiscardOldestPolicy:抛弃队列中等待最久的任务，然后把当前任务加入队列中尝试再次提交当前任务   
 - DiscardPolicy:直接丢弃任务，不予任何处理也不抛出异常。如果允许任务丢失，这是最好的一种方案
 
-## 使用建议
+### 线程池配置合理线程数
+#### CPU密集型    
+该任务需要大量的运算，并且没有阻塞，CPU一直全速运行，CPU密集任务只有在真正的多核CPU上才可能通过多线程加速  
+CPU密集型任务配置尽可能少的线程数量：CPU核数+1个线程的线程池
+
+#### IO密集型
+IO密集型任务线程并不是一直在执行任务，则应配置尽可能多的线程，如CPU核数*2   
+
+- 某大厂设置策略：IO密集型时，大部分线程都阻塞，故需要多配置线程数：
+公式：CPU核数/1-阻塞系数      阻塞系数：0.8-0.9   
+比如8核CPU： 8/1-0.9 = 80 个线程数
+
+## 最终建议
 根据阿里巴巴编码规约，不允许使用Executors去创建，而是通过ThreadPoolExecutor的方式创建，这样让写的同学更加明确线程池的运行规则，避免资源耗尽的风险。
 executors各个方法的弊端：
 1. newFixedThreadPool和newSingleThreadExecutor:    
-   主要问题是堆积的请求处理队列可能会耗费非常大的内存，甚至OOM
+   主要问题是允许的队列长度为Integer.MAX_VALUE,堆积的请求处理队列可能会耗费非常大的内存，甚至OOM
 2. newCachedThreadPool和newScheduledThreadPool:   
    主要问题是线程数最大数是Integer.MAX_VALUE,可能会创建数量非常多的线程，甚至OOM   
 
