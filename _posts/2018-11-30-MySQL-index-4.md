@@ -45,4 +45,4 @@ innoDB使用了B+树索引模型，每个索引都对应着一棵B+树。
 
 
 >本文为极客时间《MySQL实战45讲》的学习笔记，其中含有部分原文，如有侵权行为请联系我立刻删除    
-第五节：[MySQL之索引系列（二）](https://yuge.ml/2018/12/05/MySQL-index-5.html)
+第五节：[MySQL之索引系列（二）](https://justed.github.io/2018/12/05/MySQL-index-5.html)

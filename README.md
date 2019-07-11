@@ -129,7 +129,7 @@ You can easily get started by modifying _config.yml
 title: 'Justd | Blog' # 你的博客网站标题
 description: '很高兴能在这里与你分享我对技术和生活的思考。' # 站点描述
 keyword: '张敬东 /后端 /java' # 网站关键词
-url: 'https://yuge.ml' # 站点url
+url: 'https://justed.github.io' # 站点url
 baseurl: ''
 
 # Build settings

@@ -28,7 +28,7 @@ tags: MySQL
    
 **从非主键索引回到主键索引树搜索的过程，称之为回表**。以上过程中，读了k索引树的三条记录（步骤1、3、5），回表了两次（步骤2、4）。
 在引擎内部通过索引k上其实是读了三个记录：k=3、4、5,但是对于MySQL的server层来说，他在找引擎拿到了两条记录(具体查找过程中server与引擎的执行过程见第一章[一条SQL查询语句的执行过程
-](https://yuge.ml/2018/11/14/MySQL-select.html))，因此MySQL认为扫描行数为2。具体如何查看扫描行数后面的会介绍。  
+](https://justed.github.io/2018/11/14/MySQL-select.html))，因此MySQL认为扫描行数为2。具体如何查看扫描行数后面的会介绍。  
 了解了回表的过程，下面来看如何优化索引来避免回表   
 
 ## 覆盖索引  
@@ -107,7 +107,7 @@ select * from tuser where name like '张%' and age = 23;
 >本文为极客时间[《MySQL实战45讲》](http://gk.link/a/101tc) 的学习笔记，其中含有部分原文，如有侵权行为请联系我立刻删除   
 为丁奇大佬宣传一下   
 ![](http://upload-images.jianshu.io/upload_images/2998394-29d07d10798776a0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
-第六节：[全局锁和表锁](https://yuge.ml/2018/12/12/MySQL-lock1.html)
+第六节：[全局锁和表锁](https://justed.github.io/2018/12/12/MySQL-lock1.html)
 
 
 

@@ -25,7 +25,7 @@ tags: Java
 ### 结构型模式   
 >适配器模式：将一个类的方法接口转换成客户希望的另一个接口   
 组合模式：将对象组合成树型结构以表示“部分-整体”的层次结构   
-[装饰模式](https://yuge.ml/2018/10/16/DesingPatterns-decorator.html)：动态的给对象添加新的功能   
+[装饰模式](https://justed.github.io/2018/10/16/DesingPatterns-decorator.html)：动态的给对象添加新的功能   
 代理模式：为其他对象提供一个代理以控制对这个对象的访问      
 蝇量模式：通过共享技术有效的支持大量细粒度的对象   
 外观模式：提供统一的方法来访问子系统的一群接口   
@@ -113,9 +113,9 @@ tags: Java
 >本文代码例子来源于[《Head-First设计模式》](https://share.weiyun.com/570mvPm)    
 
 设计模式学习系列：   
-[基本概念](https://yuge.ml/2018/10/17/DesingPatterns-outline.html)    
-[工厂模式](https://yuge.ml/2018/10/18/DesingPatterns-Factory.html)   
-[装饰者模式](https://yuge.ml/2018/10/16/DesingPatterns-decorator.html)
+[基本概念](https://justed.github.io/2018/10/17/DesingPatterns-outline.html)    
+[工厂模式](https://justed.github.io/2018/10/18/DesingPatterns-Factory.html)   
+[装饰者模式](https://justed.github.io/2018/10/16/DesingPatterns-decorator.html)
 
 
 

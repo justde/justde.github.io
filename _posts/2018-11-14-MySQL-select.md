@@ -101,7 +101,7 @@ select SQL_CACHE * from T where ID = 10;
 - 表T中ID字段有索引：
     - 调用InnoDB的`"获取满足条件的第一行"`接口，server层还会再判断一次值是否正确，然后放入结果集，接着继续访问`"满足条件的下一行"`接口，这些接口是引擎已经定义好的。
   
-在MySQL的[慢查询日志](https://yuge.ml/2018/09/25/MySQL-analysis.html)中，rows_examined字段表示该语句执行过程中扫描了多少行，这个值就是调用引擎获取数据行的时候添加的。
+在MySQL的[慢查询日志](https://justed.github.io/2018/09/25/MySQL-analysis.html)中，rows_examined字段表示该语句执行过程中扫描了多少行，这个值就是调用引擎获取数据行的时候添加的。
 >某些场景下，执行器调用一次，引擎内部会扫描很多行，因此**引擎扫描行数跟rows_examined并不完全相同**，这一点后文会详细说明。
 
 
@@ -118,4 +118,4 @@ select SQL_CACHE * from T where ID = 10;
 - wait_timeout指的是“连接完成后，使用过程中”的等待时间    
   
 >感谢《MySQL实践》提供的图与知识点    
-第二节：[MySQL系列之一条更新SQL的生命历程](https://yuge.ml/2018/11/14/MySQL-select.html)
+第二节：[MySQL系列之一条更新SQL的生命历程](https://justed.github.io/2018/11/14/MySQL-select.html)
