@@ -1,15 +1,15 @@
 ---
 layout: post
-title: '几个零碎的知识点'
+title: 'JVM相关'
 date: 2019-07-25
 author: Justd
 cover: '/assets/img/2019-07/coder.jpg'
 tags: 面试  java  
 ---
-从小公司面试题抽出几个来记录下
+有关JVM的几个知识点
 
 
-1. 类的生命周期   
+## 1. 类的生命周期   
    - 创建阶段
      - 为对象分配存储空间
      - 构造对象
@@ -31,7 +31,26 @@ tags: 面试  java
    - 收集阶段
    - 终结阶段
    - 对象空间重新分配阶段
-2. 对jvm的理解   
+## 2. ClassLoarder
+   类的加载、连接初始化：
+   - 加载：查找并加载字节码数据
+   - 连接：
+     - 验证：确保被加载类的正确性
+     - 准备：为类的静态变量分配内存，并初始化默认值
+     - 解析：把类中的符号引用转换为直接引用
+   - 初始化：为类的静态变量赋予正确的初始值
+
+## 3. 默认三个ClassLoader
+   - BootStrap
+   - Extension
+   - Application
+
+  **加载顺序** ：bootStrap -> Extension -> Application 如果application也没有加载到，则返回给委托的发起者由它到指定的文件或者网络中加载该类。如果还没有加载到，则抛 ClassNotFoundException 
+
+  **原因** ：
+    - 避免重复加载
+    - 安全：防止用户自定义Java核心api，比如用户自定义一个String，并优先于java核心的String，会导致先加载用户自定义的类，造成安全问题。
+## 4. JVM内存结构
 
    ![jdk1.8版本](/assets/img/2019-07/jvm.png)  
     - 堆：存放对象实例，几乎所有的对象实例都在这里分配内存
@@ -41,37 +60,4 @@ tags: 面试  java
     - 程序计数器：当前线程所执行的字节码的行号指示器
 
     其中堆/元空间为线程共享内存，其余每个线程都有各自的内存空间。   
-3. Spring Boot相关
-    > 简化了使用Spring的流程，不用关心工具是如何集成的，只需要在pom文件中引入该工具starter的jar即可使用   
 
-    1. SpringBoot的核心配置文件有哪几种格式？有什么区别
-    配置文件: application
-    格式: .properties 和 .yml   
-       - properties
-           ```java
-           app.user.name=springboot
-           ```
-       - yml 
-           ```java
-           app:
-               user:
-                   name: springboot
-           ```
-        yml不支持 `@propertySource`
-    2. SpringBoot的核心注解是哪个？它主要有哪几个注解组成？  
-    启动类上面的注解：`@SpringBootApplication` 主要包含一下三个注解：
-        - `@SpringBootConfiguration`: 组合了`@Configuration`注解，实现配置文件的功能   
-        - `@EnableAutoConfiguration`: 打开自动配置的功能。也可以关闭某个自动配置的选项，如关闭数据源自动配置功能：`@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})`。   
-        - `@ComponentScan`: Spring组件扫描  
-    3. 开启SpringBoot特性有哪几种方式  
-       - 继承Spring-boot-starter-parent项目  
-       - 导入Spring-boot-dependencies项目依赖  
-    4. SpringBoot需要独立的Servlet么
-    不需要，SpringBoot内置了Tomcat/Jetty等容器
-    5. 运行SpringBoot的几种方式   
-       - 打包命令或者放到容器中运行  
-       - 用Maven/Gradle插件运行  
-       - 直接执行main方法运行 
-    6. 如何理解SpringBoot中的Starters  
-    Starters可以理解为启动器，它包含了一系列可集成到应用中的依赖包，需要的时候只需要在pom文件中添加依赖即可
-4
